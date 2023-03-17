@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    overflow: hidden;
+}
+  
+#caja {
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tapa{
+    width: 500px;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    z-index: 3;
+}
+
+.animation-tapa{
+    animation: arriba 2s forwards;
+}
+
+@keyframes arriba{
+    to{ transform: translate(-50%, -70%); opacity: 0.1;}
+}
+
+.regalo{
+    width: 500px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    z-index: 1;
+}
+
+.animation-regalo{
+    animation: abajo 2s forwards;
+}
+
+@keyframes abajo{
+    to{ transform: translate(-50%, -30%); opacity: 0.1;}
+}
+
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#mensaje {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: radial-gradient(circle, rgba(41,4,4,1) 0%, rgba(163,14,14,1) 64%);
+    background-clip: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 18ch;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+#mandarina {
+    width: 200px;
+    position: absolute;
+    bottom: -250px;
+    transform: translateX(-55%) scale(0.1);
+    z-index: 0;
+}
+
+.animation-mandarina{
+    animation: mandarina 2s forwards;
+}
+
+.achicar-arriba{
+    animation: achicar-arriba 2s forwards;
+}
+
+.achicar-abajo{
+    animation: achicar-abajo 2s forwards;
+
+}
+
+.texto{
+    animation: texto 1s forwards;
+}
+
+@keyframes mandarina{
+    to{ transform: scale(4) translate(-15%, 0);}
+}
+
+@keyframes achicar-arriba{
+    from{ transform:  scale(1) translate(-50%, -70%);  opacity: 0.1;}
+    to{ transform:  scale(0) translate(-100%, -150%) rotate(-180deg);  opacity: 0;}
+}
+
+@keyframes achicar-abajo{
+    from{ transform:  scale(1) translate(-50%, -40%);  opacity: 0.1;}
+    to{ transform:  scale(0)  translate(-100%, -250%) rotate(180deg);  opacity: 0;}
+}
+
+@keyframes texto{
+    to{ transform:  scale(3)  translate(-12%, -70px);}
+}
+  
+.oculto {
+    display: none;
+}
