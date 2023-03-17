@@ -26,3 +26,15 @@ todo.addEventListener("click", function() {
 document.getElementById("todo").addEventListener("click", function() {
 	document.getElementById("sonidito").play();
 });
+
+//carga
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => {
+    preloader.classList.add("fadeOut");
+});
+
+
+window.addEventListener("load", () => {
+    preloader.classList.add("fadeOut");
+});
