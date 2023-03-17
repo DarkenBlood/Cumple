@@ -23,11 +23,25 @@ tapa.addEventListener("click", function() {
 });
 
 regalo.addEventListener("click", function() {
-    regalo.classList.add("animation-regalo");
     tapa.classList.add("animation-tapa");
+    regalo.classList.add("animation-regalo");
+    mandarina.classList.add("animation-mandarina");
+
+    setTimeout(function() {
+        mensaje.classList.add("texto")
+    }, 500);
+
+    setTimeout(function() {
+        tapa.classList.add("achicar-arriba");
+        regalo.classList.add("achicar-abajo");
+    }, 2000);
 });
 
 //sonido
+document.getElementById("regalo").addEventListener("click", function() {
+	document.getElementById("sonidito").play();
+});
+
 document.getElementById("tapa").addEventListener("click", function() {
 	document.getElementById("sonidito").play();
 });
